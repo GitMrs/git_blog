@@ -1,6 +1,6 @@
 # 通过hexo-cli + gitPage 构件博客项目
  ## 基础配置
-  1. mkdir blog  建立一个文件夹
+  1. mkdir blog  建立一个文件夹 
   ``` 
     mkdir blog
   ```
