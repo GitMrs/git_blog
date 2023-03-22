@@ -6,7 +6,7 @@ tags: "软件"
 cover: "/img/11536.jpg"
 mp3: "/music/11536.m4a"
 ---
-## 拉取镜像
+## 拉取镜像并启动
 ```bash
 docker run -d --name oracle19c -p 1521:1521 -p 5500:5500 --privileged=true -it -v /opt/soft/db/oracle/:/var/opt/oracle/data -e TZ=Asia/Chongqing registry.cn-beijing.aliyuncs.com/zhouchaoyi/oracle19c:19.3 
 ```
