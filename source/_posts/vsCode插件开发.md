@@ -4,6 +4,7 @@ date: 2021-1-4 16:23:35
 categories: "cli"
 tags: "vscode" 
 cover: "/img/vscode.jpg"
+mp3: "/music/music_vscode.mp3"
 ---
 # 记录一下vsCode 插件开发的流程
 
