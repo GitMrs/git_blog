@@ -1,8 +1,11 @@
 ---
 title: jenkins 项目配置
 cover: "/img/cover.jpg"
+tags: "工具"
+mp3: "/music/music_飞鸟和蝉.m4a"
 ---
-jenkins 项目配置，默认已经配好nginx；项目目录都已经创建好！
+
+jenkins 项目配置，默认已经配好 nginx；项目目录都已经创建好！
 
 ## 开始配置
 
@@ -10,13 +13,14 @@ jenkins 项目配置，默认已经配好nginx；项目目录都已经创建好�
 
 ### 源码管理 git
 
-- 填写git地址
+- 填写 git 地址
 - 密码
 - 指定分支
 
 ### 增加构建步骤
 
 - Execute shell
+
 ```bash
     rm -rf node_modules
     rm -rf yarn.lock
@@ -30,20 +34,20 @@ jenkins 项目配置，默认已经配好nginx；项目目录都已经创建好�
 ```
 
 ### 推送到别的服务器
+
 - 增加构建后操作步骤 -> Send build artifacts over SSH
 - SSH Server
-    · Name 选择对应的服务器
+  · Name 选择对应的服务器
 - Transfers
-    · Source files ->  选择上面打包的dist.tar.gz
-    · Remove prefix -> 空
-    · Remote directory -> 指定服务器的目录
-    · Exec command 服务的指令
-    ```bash
-    cd /home/frontend/xdzq/web
-    mv ./home  /home/frontend/xdzq/history/home/
-    mv /home/frontend/xdzq/history/home/home  /home/frontend/xdzq/history/home/home$(date +%s)
-    tar -zxvf dist.tar.gz
-    rm -rf  dist.tar.gz
-    mv ./dist home
-    ```
-
+  · Source files -> 选择上面打包的 dist.tar.gz
+  · Remove prefix -> 空
+  · Remote directory -> 指定服务器的目录
+  · Exec command 服务的指令
+  ```bash
+  cd /home/frontend/xdzq/web
+  mv ./home  /home/frontend/xdzq/history/home/
+  mv /home/frontend/xdzq/history/home/home  /home/frontend/xdzq/history/home/home$(date +%s)
+  tar -zxvf dist.tar.gz
+  rm -rf  dist.tar.gz
+  mv ./dist home
+  ```
