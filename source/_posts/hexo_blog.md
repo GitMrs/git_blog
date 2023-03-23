@@ -3,7 +3,7 @@ title:  通过hexo-cli + gitPage 构件博客项目
 date: 2020-12-16 11:45:45
 categories: "hexo"
 tags: "hexo" 
-cover: "/img/welcome-cover1.jpg"
+cover: "/img/cover1.jpg"
 ---
   1. mkdir blog  建立一个文件夹
   ``` 
