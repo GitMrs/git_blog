@@ -183,22 +183,22 @@ services:
         constraints:
           - node.role==manager
   gitlab:
-    # image: gitlab/gitlab-ce:latest
-    image: gitlab/gitlab-ce:latest
-    volumes:
-      - infrastructure_gitlab:/etc/gitlab
-      - infrastructure_gitlab_log:/var/log/gitlab
-      - infrastructure_gitlab_opt:/var/opt/gitlab
-    networks:
-      - public
-    ports:
-      - 80:80
-    environment:
-      GITLAB_OMNIBUS_CONFIG: "external_url 'http://192.168.80.81';"
-    deploy:
-      placement:
-        constraints:
-          - node.role==manager
+      image: gitlab/gitlab-ce:latest
+      volumes:
+        - infrastructure_gitlab:/etc/gitlab
+        - infrastructure_gitlab_log:/var/log/gitlab
+        - infrastructure_gitlab_opt:/var/opt/gitlab
+      networks:
+        - public
+      ports:
+        - 80:80
+        - 2224:22
+      environment:
+        GITLAB_OMNIBUS_CONFIG: "external_url 'http://192.168.80.81';gitlab_rails['gitlab_ssh_host'] = '192.168.80.81';gitlab_rails['gitlab_shell_ssh_port'] = 2224"
+      deploy:
+        placement:
+          constraints:
+            - node.role==manager
   jenkins:
     # image: jenkinsci/blueocean:1.25.6
     image: jenkins/jenkins
