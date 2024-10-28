@@ -6,9 +6,9 @@ cover: "/img/live2d.jpg"
 categories: hexo
 ---
 
-## 给 hexo 博客添加 live2d，可爱的看板娘！
+# 给 hexo 博客添加 live2d，可爱的看板娘！
 
-### 使用官方简单办法
+## 使用官方简单办法
 
 1. 安装 hexo-helper-live2d 插件
    ```
@@ -42,7 +42,7 @@ categories: hexo
 
    ```
 
-## 根据[hexo-theme-diaspora](https://github.com/Fechin/hexo-theme-diaspora)这个主题使用大神定制版的[看板娘](https://github.com/stevenjoezhang/live2d-widget)
+### 根据[hexo-theme-diaspora](https://github.com/Fechin/hexo-theme-diaspora)这个主题使用大神定制版的[看板娘](https://github.com/stevenjoezhang/live2d-widget)
 
 ### 简单用法
 
@@ -56,7 +56,7 @@ categories: hexo
 
 2. 重启服务，即可
 
-### 定制用法
+## 定制用法
 
 1. 找到 themes/diaspora/layout/\_partial/head.ejs 头部引入模板,再 head 标签里面引入字体样式，本地自己引入配置文件
    ```
@@ -78,7 +78,7 @@ categories: hexo
    ```
 5. 重启服务既可以看到了！
 
-# 部分小问题
+## 部分小问题
 
 - 在[hexo-theme-diaspora](https://github.com/Fechin/hexo-theme-diaspora)这个主题中，看板娘被图片挡住！
 
